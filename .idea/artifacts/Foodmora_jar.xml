@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Foodmora:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Foodmora_jar</output-path>
+    <root id="archive" name="Foodmora.jar">
+      <element id="module-output" name="Foodmora" />
+    </root>
+  </artifact>
+</component>

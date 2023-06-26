@@ -1,0 +1,60 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'autonumber
+
+System -> Person: Role Select Request
+Person --> System: User
+
+System -> Person: Select Task
+
+alt 1. Show Recipe Pool
+Person --> System: Show Recipe Pool
+
+    alt Recipes present
+        System -> Person: Select from recipes
+        Person --> System: Selects recipe
+        System -> Person: Shows recipe details
+        System -> Person: Shows options
+        alt dietitian recipe options
+            Person -> System: select another recipe
+            System --> Person: Shows recipe pool
+            Person -> System: edit recipe
+            System --> Person: Shows edit menu
+            Person -> System: go to dietitian menu
+            System --> Person: Shows dietitian menu
+        end
+
+    else no recipe created
+        System -> Person: No recipe created
+    end
+
+else 2. Create Recipe
+System -> Person: request to enter recipe name
+Person --> System: enters recipe name
+System -> Person: request to enter step
+Person -> System: enters step
+    alt enter another step
+        System -> Person: repeat enter step loop
+    else enter ingredient
+        System -> Person: enter ingredient name
+        Person --> System: enters ingredient name
+        System -> Person: enter ingredient measurement
+        Person --> System: enters ingredient measurement
+        System -> Person: enter ingredient amount
+        Person --> System: enters ingredient amount
+        alt enter another ingredient
+        System -> Person:repeat ingredient loop
+        else save recipe
+        System->Database:save recipe
+        System-->Person:recipe saved
+        end
+
+    end
+
+else 3. Go to main menu
+Person --> System: Show main menu
+System -> Person: Select user type
+
+end
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+class Person{
++viewRecipe(index:int)):void
++viewRecipesPool():void
+}
+
+Person <|-- User
+
+class User{
++viewWeeks()
++currentWeekRecipes()
++createWeek()
++todayRecipe()
+}
+
+Person <|-- Dietitian
+
+class Dietitian{
++createRecipe()
++editRecipe()
+}
+
+
+@enduml

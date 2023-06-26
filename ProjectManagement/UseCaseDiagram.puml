@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+left to right direction
+
+package Role{
+    actor User as U
+    actor Dietitian as D
+}
+
+package UserActions{
+    usecase "View Weeks" as VW
+    usecase "Creates Week" as CW
+    usecase "View Today Recipe" as VTR
+    usecase "View Current Week" as VCW
+}
+
+package CommonActions{
+    usecase "View Recipes Details" as VRD
+    usecase "View Recipes List" as VRL
+}
+
+package DietitianActions{
+    usecase "Creates Recipe" as CR
+    usecase "Edit Recipe" as ER
+}
+
+D --> (CR)
+D --> (ER)
+D --> (VRL)
+D --> (VRD)
+
+U --> (VRD)
+U --> (VW)
+U --> (CW)
+U --> (VTR)
+U --> (VCW)
+
+
+
+@enduml

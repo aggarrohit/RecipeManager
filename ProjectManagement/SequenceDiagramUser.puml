@@ -1,0 +1,79 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'autonumber
+
+System -> Person: Role Select Request
+Person --> System: User
+
+System -> Person: Select Task
+
+alt 1. Show Weeks
+Person --> System: Show Weeks
+
+    alt weeks present
+        System -> Person: Select from weeks
+        Person --> System: Selects week
+        System -> Person: Shows recipes for week
+        System -> Person: Select day of week
+        Person --> System: Selects day
+        System -> Person: Shows recipe details
+    else no week created
+        System -> Person: No week created
+    end
+
+else 2. Current Week
+    alt current week present
+        System -> Person: Shows recipes for week
+        System -> Person: Select day of week
+        Person --> System: Selects day
+        System -> Person: Shows recipe details
+    else current week not created
+        System -> Person: current week not available
+    end
+
+else 3. Create Week
+System -> Person: request to enter week number
+Person --> System: enters week number
+System -> Database:Checks if week present
+    alt week present
+        System -> Person: this week already created
+    else week not present
+        System -> Database: create week with random recipe
+        Database --> System:week created
+        System -> Person: Shows created week;
+    end
+
+else 4. Today's Recipe
+    System -> Database :get today's recipe
+    alt today's recipe present
+        System -> Person: shows recipe details for today
+    else today's recipe not present
+        System -> Person: today's recipe not present;
+    end
+else 5. Show Recipe Pool
+Person --> System: Show Recipe Pool
+
+    alt Recipes present
+        System -> Person: Select from recipes
+        Person --> System: Selects recipe
+        System -> Person: Shows recipe details
+        System -> Person: Shows options
+        alt user recipe options
+            Person -> System: select another recipe
+            System --> Person: Shows recipe pool
+            Person -> System: go to user menu
+            System --> Person: Shows user menu
+        end
+
+    else no recipe created
+        System -> Person: No recipe created
+    end
+
+else 6. Go to main menu
+Person --> System: Show main menu
+System -> Person: Select user type
+
+end
+
+@enduml

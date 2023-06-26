@@ -1,0 +1,28 @@
+@startuml
+
+class Menu{
++showMainMenu():void
+handelMainMenu():void
++requestNumberInput():void
++proceedWithMainOption():void
+}
+
+Menu <|-- UserMenu
+
+class UserMenu{
++showUserMenu()
+-handleRecipePoolOption()
+}
+
+Menu <|-- DietitianMenu
+
+class DietitianMenu{
++showDietitianMenu()
+-handleRecipePoolOption()
+-showOptionsAfterRecipeView()
+-handleRecipeDetailsOption()
+
+}
+
+
+@enduml

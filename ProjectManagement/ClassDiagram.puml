@@ -1,0 +1,86 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+'interface List<RecipeKit.Main.View.Recipe>
+
+Weeks "1" *-- "0..*" Week
+
+class Weeks{
+-List<Week>:weeks
++addWeek(week:Week)
++getWeeks():List<Week>
++getWeekNumbers():int[]
++addWeek(week:Week))
++getWeekRecipes(weekNumber:int):Map<int,String>
+}
+
+class Week{
+-int:weekNumber
+-Map<int:weekDay,int:recipeId>:weekRecipes
++setWeekRecipes(Map<int,String>)
+}
+
+Week "0..*" o-- "7" Recipe
+
+class RecipePool{
+-List<Recipe>:recipes
++toString()
++getRecipeList():List<Recipe>
++getRecipe(id:String):Recipe
++getRecipe(index:int):Recipe
++replaceRecipe(Recipe,int):void
++addRecipe(recipe:Recipe):void
++printRecipeNames()
+}
+
+RecipePool "1" *-- "0..*" Recipe
+
+Recipe *-- Ingredient
+
+class Recipe{
+-int:id
+-string:name
+-List<String>:steps
+-List<Ingredient>:ingredients
++occurrenceCount:int
++lastUsedInWeekNumber
++getOccurrenceCount()
++setOccurrenceCount()
++getLastUsedInWeekNumber()
++setLastUsedInWeekNumber()
++getIngredients()
++setIngredients()
++getSteps()
++setSteps()
++deleteIngredient(index:int))
++deleteStep(index:int))
++toString():void
+}
+
+class Ingredient{
+-string:name
+-string:unit
+-double:amount
++toString()
+}
+
+enum WeekDays {
+SUNDAY
+MONDAY
+TUESDAY
+WEDNESDAY
+THURSDAY
+FRIDAY
+SATURDAY
+}
+
+class Utils{
++getWeekWithUniqueRecipes():Week
++getCurrentWeekNumber():int
++getCurrentWeekDay():int
++isWeekAcceptable(int):boolean
++getWeekDayByNumber(int):String
+}
+
+@enduml
