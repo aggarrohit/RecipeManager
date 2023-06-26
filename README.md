@@ -1,6 +1,5 @@
 # RecipeManager - Foodmora
 This is a recipe management system created using java and it runs in the terminal as it doesn't have any GUI.
-
 It has two roles i.e. User and Dietitian.
 Dietitans can create/edit recipes and view recipes in the recipe pool.
 Users can also view recipes in the recipe pool.
