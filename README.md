@@ -22,12 +22,12 @@ Steps to run the application. <br />
 
 # Documents
 Folder ProjectManagement has all the documents related to management of project <br />
-  1. Class diagrams
-         [Class Diagram](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagram.png)
-         [Class Diagram Menus](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagramMenus.png)
+  1. Class diagrams <br />
+         [Class Diagram](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagram.png) <br />
+         [Class Diagram Menus](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagramMenus.png) <br />
          [Class Diagram Roles](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagramRoles.png)
-  3. Sequense diagrams
-         [Sequence Diagram Dietitian](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/SequenceDiagramDietitian.png)
+  3. Sequense diagrams <br />
+         [Sequence Diagram Dietitian](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/SequenceDiagramDietitian.png) <br />
          [Sequence Diagram User](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/SequenceDiagramUser.png)
   5. Stories and tasks [Click here](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/Stories%20and%20tasks.docx)
   6. Use case diagram [Click here](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/UseCaseDiagram.png)
