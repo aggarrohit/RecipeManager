@@ -22,7 +22,7 @@ Steps to run the application. <br />
 
 # Documents
 Folder ProjectManagement has all the documents related to management of project <br />
-  1. Class diagrams (![ClassDiagramMenus](https://github.com/aggarrohit/RecipeManager/blob/master/ProjectManagement/ClassDiagramMenus.png)
+  1. Class diagrams 
   2. Sequense diagrams
   3. Stories and tasks
   4. Use case diagram
